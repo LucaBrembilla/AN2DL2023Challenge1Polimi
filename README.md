@@ -52,7 +52,7 @@ By employing transfer learning and optimizing hyperparameters, our ConvNextBase 
 ## How to Run
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/LucaBrembilla/AN2DL2023Challenge1Polimi
    ```
    
 3. Install dependencies:
@@ -62,7 +62,7 @@ By employing transfer learning and optimizing hyperparameters, our ConvNextBase 
 
 5. Run the training script:
    ```bash
-   python train.py
+   python main.py
    ```
 
 ## License
