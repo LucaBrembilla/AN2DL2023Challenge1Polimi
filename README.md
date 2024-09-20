@@ -59,9 +59,9 @@ By employing transfer learning and optimizing hyperparameters, our ConvNextBase 
    ```bash
    pip install -r requirements.txt
    ```
-3. Install the data and place them as `data/public_data.npz`. You can download our data from `https://drive.google.com/file/d/1pJo2-7Mdu74xS_uIfRj5GXVSSZrsYyvC/view?usp=drive_link`
+3. Install the data and place them as `data/public_data.npz`. You can download our data from [here](https://drive.google.com/file/d/1pJo2-7Mdu74xS_uIfRj5GXVSSZrsYyvC/view?usp=drive_link)
    
-4. Install our pretrained model from `https://drive.google.com/file/d/1-43LO0PdPByljEOuDBGvbhpqhH-G2MvG/view?usp=sharing` or train your own model running the train script:
+4. Install [our pretrained model](https://drive.google.com/file/d/1-43LO0PdPByljEOuDBGvbhpqhH-G2MvG/view?usp=sharing) and place it in `models/AN2DL2023Challenge1Polimi.keras` or train your own model running the train script:
    ```bash
    python train.py
    ```
