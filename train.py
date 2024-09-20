@@ -85,7 +85,7 @@ history = model.fit(
 )
 
 # Save model
-model.save('saved_model/trainedModel.h5')
+model.save('models/AN2DL2023Challenge1Polimi.keras')
 
 # Predict labels for the entire test set
 predictions = (model.predict(X_val)>0.5).astype(int)
