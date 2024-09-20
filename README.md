@@ -45,8 +45,8 @@ The final model was evaluated on the test set with the following metrics:
 - **F1-Score**: 83.09%
 
 Here's the comparison of the validation loss and accuracy during training, illustrating the model's convergence and stability over time.
-![Validation Loss](./assets/val_loss.png)
-|[Validation Accuracy](./assets/val_acc.png)
+<img src="./assets/val_loss.png" width="200" />
+<img src="./assets/val_acc.png" width="200" />
 
 ## How to Run
 
