@@ -59,8 +59,14 @@ By employing transfer learning and optimizing hyperparameters, our ConvNextBase 
    ```bash
    pip install -r requirements.txt
    ```
-
-3. Run the test script:
+3. Install the data and place them as `data/public_data.npz`. You can download our data from `https://drive.google.com/file/d/1pJo2-7Mdu74xS_uIfRj5GXVSSZrsYyvC/view?usp=drive_link`
+   
+4. Install our pretrained model from `https://drive.google.com/file/d/1-43LO0PdPByljEOuDBGvbhpqhH-G2MvG/view?usp=sharing` or train your own model running the train script:
+   ```bash
+   python train.py
+   ```
+   
+5. Run the test script:
    ```bash
    python test.py
    ```
