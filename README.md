@@ -10,7 +10,7 @@ This project demonstrates the application of neural networks for recognizing pla
 - Marianna Dragonetti
 
 ## Introduction
-The project aims to address the problem of plant disease recognition using transfer learning techniques. We experimented with different neural network architectures such as VGG16, ResNet50, and ConvNextBase. The ConvNextBase architecture delivered the best performance, achieving:
+The project aims to address the problem of plant disease recognition using transfer learning techniques. We experimented with different neural network architectures such as VGG16, ResNet50, and ConvNextBase. The ConvNextBase architecture delivered the best performance, achieving on the test set, which was never sent to us:
 - Accuracy: 87.10%
 - Precision: 82.77%
 - Recall: 83.42%
@@ -55,14 +55,14 @@ By employing transfer learning and optimizing hyperparameters, our ConvNextBase 
    git clone https://github.com/LucaBrembilla/AN2DL2023Challenge1Polimi
    ```
    
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-5. Run the training script:
+3. Run the test script:
    ```bash
-   python main.py
+   python test.py
    ```
 
 ## License
