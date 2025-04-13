@@ -7,9 +7,14 @@ from sklearn.utils import class_weight
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import matplotlib.pyplot as plt
 from utils.preprocess import preprocess_data
+from tensorflow.keras.initializers import GlorotUniform  # Import Xavier initializer
+from tensorflow.keras.regularizers import l2  # Example regularizer
 
 # Set seed
 seed = 2
+
+xavier_init = GlorotUniform(seed=seed)
+ridge = l2(1e-4)  # Choose your regularization strength
 
 # Load dataset
 dataset = np.load('data/public_data.npz', allow_pickle=True)
@@ -20,6 +25,13 @@ X_clean, y_clean = preprocess_data(X, y)
 
 # Split the data
 X_train, X_val, y_train, y_val = train_test_split(X_clean, y_clean, random_state=seed, test_size=.20)
+
+# Load on GPU
+train_dataset = tf.data.Dataset.from_tensor_slices((X_train, y_train))
+train_dataset = train_dataset.shuffle(buffer_size=1024).batch(32).prefetch(tf.data.AUTOTUNE)
+
+val_dataset = tf.data.Dataset.from_tensor_slices((X_val, y_val))
+val_dataset = val_dataset.batch(32).prefetch(tf.data.AUTOTUNE)
 
 # Model definition
 base_model = tf.keras.applications.ConvNeXtBase(weights='imagenet', include_top=False, input_shape=(96, 96, 3))
