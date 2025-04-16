@@ -72,7 +72,7 @@ class_weights = dict(zip(np.unique(y_train), class_weights))
 lr_scheduler = tfk.callbacks.ReduceLROnPlateau(
   monitor='val_accuracy',
   patience=5,
-  factor=0.999,
+  factor=0.5,
   mode='max',
   min_lr=1e-5
 )
@@ -88,7 +88,7 @@ early_stopping = tfk.callbacks.EarlyStopping(
 history = model.fit(
   X_train,
   y_train,
-  batch_size=32,
+  batch_size=64,
   epochs=200,
   validation_data=(X_val, y_val),
   callbacks=[early_stopping, lr_scheduler],
