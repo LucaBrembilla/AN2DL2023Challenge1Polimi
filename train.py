@@ -7,9 +7,8 @@ from sklearn.utils import class_weight
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 import matplotlib.pyplot as plt
 from utils.preprocess import preprocess_data
-from tensorflow.keras.initializers import GlorotUniform  # Import Xavier initializer
-from tensorflow.keras.regularizers import l2  # Example regularizer
-
+from tensorflow.keras.initializers import GlorotUniform
+from tensorflow.keras.regularizers import l2
 # Set seed
 seed = 2
 
