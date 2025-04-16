@@ -109,10 +109,10 @@ recall = recall_score(y_val, predictions, average='macro')
 f1 = f1_score(y_val, predictions, average='macro')
 
 # Display the computed metrics
-print('Accuracy:', accuracy.round(4))
-print('Precision:', precision.round(4))
-print('Recall:', recall.round(4))
-print('F1:', f1.round(4))
+print('Accuracy:', round(accuracy, 4))
+print('Precision:', round(precision, 4))
+print('Recall:', round(recall, 4))
+print('F1:', round(f1, 4))
 
 # Plot training history
 plt.figure(figsize=(15, 5))
